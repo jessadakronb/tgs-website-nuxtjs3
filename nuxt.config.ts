@@ -30,7 +30,7 @@ export default defineNuxtConfig({
       title: "Vuetify 3 + Nuxt 3 Starter",
       titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
       link: [
-        { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
+        { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"},
         { rel: "preconnect", href: "https://rsms.me/" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "canonical", href: url },
