@@ -12,6 +12,7 @@ export const defaults: DefaultsInstance = {
 		height: 38,
 		rounded: "lg",
 		size: "small",
+		ripple: false
 	},
 	VTextField: {
 		color: "primary",
