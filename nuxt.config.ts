@@ -1,7 +1,7 @@
 import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
-const title = "Vuetify 3 + Nuxt 3 Starter";
+const title = "True Shopping ช้อปที่ใช่ รู้ใจคุณ";
 const shortTitle = "Vuetify 3 + Nuxt 3 Starter";
 const description = "Template to get you up and running with Nuxt 3 & Vuetify 3";
 const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
@@ -30,8 +30,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Vuetify 3 + Nuxt 3 Starter",
-      titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
+      title: "True Shopping ช้อปที่ใช่ รู้ใจคุณ",
+      // titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
       link: [
         { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"},
         { rel: "preconnect", href: "https://rsms.me/" },
