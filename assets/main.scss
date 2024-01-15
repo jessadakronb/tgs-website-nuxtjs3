@@ -12,8 +12,26 @@ $family: "Prompt", sans-serif;
   }
 }
 
+$color-gradient-main: linear-gradient(57deg,
+    #63C891 2.28%,
+    #56C9D8 16.2%,
+    #7587BD 28.13%,
+    #8E54A9 39.89%,
+    #B94296 49.76%,
+    #E62F83 64.72%,
+    #ED7052 80.24%,
+    #F6C115 92.53%);
+
 html {
   font-size: 16px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 13px;
 }
 
 // Reset link styles
@@ -34,8 +52,14 @@ a {
 }
 
 .v-btn {
-  font-weight: 700 !important;
+  font-size: 20px !important;
+  color: #FFF !important;
+  // font-weight: 700 !important;
+  border-radius: 10px !important;
+  background: $color-gradient-main !important
 }
+
+
 
 .label {
   font-weight: 600;

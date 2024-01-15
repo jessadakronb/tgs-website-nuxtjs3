@@ -10,12 +10,11 @@ export const defaults: DefaultsInstance = {
 	VBtn: {
 		variant: "flat",
 		height: 38,
-		rounded: "lg",
 		size: "small",
 		ripple: false
 	},
 	VTextField: {
-		color: "primary",
+		// color: "primary",
 		variant: "outlined",
 		density: "comfortable",
 	},

@@ -1,7 +1,7 @@
 <template>
-  <div fluid class="account">
+  <div class="account">
     <div class="svg-background">
- 
+
     </div>
   </div>
 </template>
