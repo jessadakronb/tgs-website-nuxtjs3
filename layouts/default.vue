@@ -33,7 +33,7 @@ interface Route {
 const route = useRoute();
 
 // List of paths to exclude the mobile bottom navigation
-const excludedPaths = ['/m/login', '/m/register', '/m/forgot-password'];
+const excludedPaths = ['/m/guest/login', '/m/login', '/m/register', '/m/forgot-password'];
 
 // Computed property to check if the current route is a mobile layout and not an excluded path
 const isMobileLayout = computed((): boolean => {

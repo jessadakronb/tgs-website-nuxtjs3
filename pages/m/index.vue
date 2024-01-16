@@ -1,5 +1,5 @@
 <template>
   <v-container class="d-flex justify-center">
-    <h1>Mobile site Home</h1>
+    <CommonInputPassword></CommonInputPassword>
   </v-container>
 </template>

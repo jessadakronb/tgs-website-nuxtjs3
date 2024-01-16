@@ -14,8 +14,8 @@ export const defaults: DefaultsInstance = {
 		ripple: false
 	},
 	VTextField: {
-		// color: "primary",
-		variant: "outlined",
+		color: "#E90089",
+		variant: "solo",
 		density: "comfortable",
 	},
 };
