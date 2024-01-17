@@ -1,5 +1,5 @@
 <template>
   <v-container class="d-flex justify-center">
-    <CommonInputPassword></CommonInputPassword>
+    <CustomInputPassword></CustomInputPassword>
   </v-container>
 </template>

@@ -7,7 +7,8 @@
           style="max-width: 100px; max-height: 100px;" />
       </div>
       <div class="login-password">
-        <VTextField label="รหัสผ่าน" type="password" hide-details clearable />
+        <CustomInputPassword/>
+        <!-- <VTextField label="รหัสผ่าน" type="password" hide-details /> -->
       </div>
       <div class="forgot-password">
         <p>ลืมรหัสผ่าน?</p>
