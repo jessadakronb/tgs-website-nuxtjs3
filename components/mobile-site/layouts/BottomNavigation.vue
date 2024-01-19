@@ -1,43 +1,63 @@
 <template>
   <div class="bottom-nav">
+    <!-- Home Link -->
     <NuxtLink to="/m" class="nav-item">
-      <img v-if="$route.path === '/m'" src="@/assets/mobile-site/icons/bottom-navigation/ic-home-active.svg"
-        alt="home active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-home.svg" alt="home" />
+      <img :src="homeActive ? homeActiveIcon : homeIcon" alt="home" />
       หน้าหลัก
     </NuxtLink>
     <NuxtLink to="/m/product" class="nav-item">
-      <img v-if="$route.path === '/m/product'" src="@/assets/mobile-site/icons/bottom-navigation/ic-product-active.svg"
-        alt="product active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-product.svg" alt="product" />
+      <img :src="productActive ? productActiveIcon : productIcon" alt="product" />
       สินค้า
     </NuxtLink>
     <NuxtLink to="/m/promotion" class="nav-item">
-      <img v-if="$route.path === '/m/promotion'" src="@/assets/mobile-site/icons/bottom-navigation/ic-promotion-active.svg"
-        alt="promotion active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-promotion.svg" alt="promotion" />
+      <img :src="promotionActive ? promotionActiveIcon : promotionIcon" alt="promotion" />
       โปรโมชั่น
     </NuxtLink>
     <NuxtLink to="/m/lives" class="nav-item">
-      <img v-if="$route.path === '/m/lives'" src="@/assets/mobile-site/icons/bottom-navigation/ic-live-active.svg"
-        alt="live active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-live.svg" alt="live" />
+      <img :src="livesActive ? livesActiveIcon : livesIcon" alt="lives" />
       ไลฟ์
     </NuxtLink>
     <NuxtLink to="/m/notification" class="nav-item">
-      <img v-if="$route.path === '/m/notification'"
-        src="@/assets/mobile-site/icons/bottom-navigation/ic-notification-active.svg" alt="notification active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-notification.svg" alt="notification" />
+      <img :src="notificationActive ? notificationsActiveIcon : notificationIcon" alt="notification" />
       แจ้งเตือน
     </NuxtLink>
     <NuxtLink to="/m/account" class="nav-item">
-      <img v-if="$route.path === '/m/account'" src="@/assets/mobile-site/icons/bottom-navigation/ic-account-active.svg"
-        alt="account active" />
-      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-account.svg" alt="account" />
+      <img :src="accountActive ? accountActiveIcon : accountIcon" alt="account" />
       บัญชี
     </NuxtLink>
+
   </div>
 </template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import homeIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-home.svg';
+import homeActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-home-active.svg';
+import productIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-product.svg';
+import productActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-product-active.svg';
+import promotionIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-promotion.svg';
+import promotionActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-promotion-active.svg';
+import livesIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-live.svg';
+import livesActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-live-active.svg';
+import notificationIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-notification.svg';
+import notificationsActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-notification-active.svg';
+import accountIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-account.svg';
+import accountActiveIcon from '@/assets/mobile-site/icons/bottom-navigation/ic-account-active.svg';
+
+const route = useRoute();
+
+const isActive = (path: string) => computed(() => route.path === path);
+
+const homeActive = isActive('/m');
+const productActive = isActive('/m/product');
+const promotionActive = isActive('/m/promotion');
+const livesActive = isActive('/m/lives');
+const notificationActive = isActive('/m/notification');
+const accountActive = isActive('/m/account');
+
+</script>
+
 <style>
 .bottom-nav {
   display: flex;
