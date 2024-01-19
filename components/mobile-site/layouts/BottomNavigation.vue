@@ -1,32 +1,43 @@
 <template>
   <div class="bottom-nav">
     <NuxtLink to="/m" class="nav-item">
-      <v-icon size="24">mdi-home</v-icon>
+      <img v-if="$route.path === '/m'" src="@/assets/mobile-site/icons/bottom-navigation/ic-home-active.svg"
+        alt="home active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-home.svg" alt="home" />
       หน้าหลัก
     </NuxtLink>
     <NuxtLink to="/m/product" class="nav-item">
-      <v-icon size="24">mdi-cart-outline</v-icon>
+      <img v-if="$route.path === '/m/product'" src="@/assets/mobile-site/icons/bottom-navigation/ic-product-active.svg"
+        alt="product active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-product.svg" alt="product" />
       สินค้า
     </NuxtLink>
-    <NuxtLink to="/mpromotion" class="nav-item">
-      <v-icon>mdi-history</v-icon>
+    <NuxtLink to="/m/promotion" class="nav-item">
+      <img v-if="$route.path === '/m/promotion'" src="@/assets/mobile-site/icons/bottom-navigation/ic-promotion-active.svg"
+        alt="promotion active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-promotion.svg" alt="promotion" />
       โปรโมชั่น
     </NuxtLink>
     <NuxtLink to="/m/lives" class="nav-item">
-      <v-icon>mdi-history</v-icon>
+      <img v-if="$route.path === '/m/lives'" src="@/assets/mobile-site/icons/bottom-navigation/ic-live-active.svg"
+        alt="live active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-live.svg" alt="live" />
       ไลฟ์
     </NuxtLink>
     <NuxtLink to="/m/notification" class="nav-item">
-      <v-icon>mdi-history</v-icon>
+      <img v-if="$route.path === '/m/notification'"
+        src="@/assets/mobile-site/icons/bottom-navigation/ic-notification-active.svg" alt="notification active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-notification.svg" alt="notification" />
       แจ้งเตือน
     </NuxtLink>
     <NuxtLink to="/m/account" class="nav-item">
-      <v-icon>mdi-history</v-icon>
+      <img v-if="$route.path === '/m/account'" src="@/assets/mobile-site/icons/bottom-navigation/ic-account-active.svg"
+        alt="account active" />
+      <img v-else src="@/assets/mobile-site/icons/bottom-navigation/ic-account.svg" alt="account" />
       บัญชี
     </NuxtLink>
   </div>
 </template>
-
 <style>
 .bottom-nav {
   display: flex;
@@ -48,9 +59,6 @@
   padding: 10px;
   text-decoration: none;
   color: #333;
-  /* Icon and text color */
   font-size: 10px;
-  /* Set font size to 10px */
 }
-
 </style>
